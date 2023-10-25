@@ -3,6 +3,7 @@
 
 <head>
 	<title>new app</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<style type="text/css">
 		body {
 			width: 100%;
@@ -11,13 +12,17 @@
 		}
 		header,footer{
 			color: #fff;
+			padding: 2rem 1rem;
 		}
 
 		div {
 			position: absolute;
-			height: 100%;
+			margin: 20px;
+			height: calc(100% - 1rem - 40px);
 			width: 100%;
-			display: table;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 		}
 
 		h1 {
@@ -32,26 +37,39 @@
 
 <script src="webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
 <script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
+<script type="module" src="./js/index.js">
+
+</script>
 <script type="text/javascript">
-	//sample code for calling LS2 API
-	webOS.service.request("luna://com.palm.systemservice", {
-		method: "clock/getTime",
-		parameters: {},
+	let subscriptionHandle;
+	subscriptionHandle = webOS.service.request("luna://com.palm.systemservice", {
+		method: "time/getSystemTime",
+		parameters: {
+			subscribe: true,
+		},
 		onSuccess: function (args) {
-			console.log("UTC:", args.utc);
+			//console.log(`Current Time (${args.TZ}): ${args.localtime.hour}:${args.localtime.minute}:${args.localtime.second}`);
+
+			const timeEl = document.createElement('span')
+			timeEl.innerHTML = `Current Time (${args.TZ}): ${args.localtime.hour}:${args.localtime.minute}:${args.localtime.second}`
+			document.getElementById('header').appendChild(timeEl)
 		},
 		onFailure: function (args) {
-			console.log("Failed to getTime");
+			console.log("Failed to getTime", args);
 		}
 	});
+	document.addEventListener('keydown', logEvent)
+	function logEvent(e){
+		console.log(e);
+	}
 </script>
 
 <body>
-	<header>this is the header</header>
 	<div>
+		<header id="header">this is the header</header>
 		<h1>Hello, World!</h1>
+		<footer>the footer is here</footer>
 	</div>
-	<footer>the footer is here</footer>
 </body>
 
 </html>
