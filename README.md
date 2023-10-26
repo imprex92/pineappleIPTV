@@ -14,8 +14,6 @@ This is a IPTV app made for smart TV that is running on WebOS.
 
 ## About
 
-A concise explanation of what your project does, its purpose, and any relevant background information.
-
 I have a old LG TV in my bedroom along with a IPTV subscription. I noticed that none of the existing IPTV apps on LG app store didn't work anymore so I decided to try and build a app of my own for private use.
 It's purpose it to allow the user to upload m3u files with the different channels and then be able to search through the list and select desired channel and stream it on the TV in a easy way.
 
