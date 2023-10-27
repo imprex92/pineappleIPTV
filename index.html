@@ -1,75 +1,61 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<title>new app</title>
-	<link rel="stylesheet" type="text/css" href="./css/index.css">
-	<style type="text/css">
-		body {
-			width: 100%;
-			height: 100%;
-			background-color: #202020;
-		}
-		header,footer{
-			color: #fff;
-			padding: 2rem 1rem;
-		}
+    <head>
+        <title>Pineapple IPTV</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+        <link rel="stylesheet" type="text/css" href="./css/videoPlayer.css">
+    </head>
 
-		div {
-			position: absolute;
-			margin: 20px;
-			height: calc(100% - 1rem - 40px);
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-		}
+    <script src="webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
+    <script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/videoPlayer.js"></script>
 
-		h1 {
-			display: table-cell;
-			vertical-align: middle;
-			text-align: center;
-			color: #FFFFFF;
-		}
+    <script type="text/javascript">
+        let subscriptionHandle;
+        subscriptionHandle = webOS.service.request("luna://com.palm.systemservice", {
+            method: "time/getSystemTime",
+            parameters: {
+                subscribe: true,
+            },
+            onSuccess: function (args) {
+                //console.log(`Current Time (${args.TZ}): ${args.localtime.hour}:${args.localtime.minute}:${args.localtime.second}`);
 
-	</style>
-</head>
+                // const timeEl = document.createElement('span')
+                // timeEl.innerHTML = `Current Time (${args.TZ}): ${args.localtime.hour}:${args.localtime.minute}:${args.localtime.second}`
+                // document.getElementById('header').appendChild(timeEl)
+            },
+            onFailure: function (args) {
+                console.log("Failed to getTime", args);
+            }
+        });
+        document.addEventListener('keydown', logEvent)
+        function logEvent(e){
+            console.log(e);
+        }
+    </script>
 
-<script src="webOSTVjs-1.2.4/webOSTV.js" charset="utf-8"></script>
-<script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
-<script type="module" src="./js/index.js"></script>
-<script type="module" src="./js/videoPlayer.js"></script>
-
-<script type="text/javascript">
-	let subscriptionHandle;
-	subscriptionHandle = webOS.service.request("luna://com.palm.systemservice", {
-		method: "time/getSystemTime",
-		parameters: {
-			subscribe: true,
-		},
-		onSuccess: function (args) {
-			//console.log(`Current Time (${args.TZ}): ${args.localtime.hour}:${args.localtime.minute}:${args.localtime.second}`);
-
-			const timeEl = document.createElement('span')
-			timeEl.innerHTML = `Current Time (${args.TZ}): ${args.localtime.hour}:${args.localtime.minute}:${args.localtime.second}`
-			document.getElementById('header').appendChild(timeEl)
-		},
-		onFailure: function (args) {
-			console.log("Failed to getTime", args);
-		}
-	});
-	document.addEventListener('keydown', logEvent)
-	function logEvent(e){
-		console.log(e);
-	}
-</script>
-
-<body>
-	<div>
-		<header id="header">this is the header</header>
-		<h1>Hello, World!</h1>
-		<footer>the footer is here</footer>
-	</div>
-</body>
+    <body>
+        <header id="header">
+            <img src="./public/assets/svg/PPG-Happy Pineapple-SVG.svg" width="32" alt="Logo">
+            <h1>Pineapple IPTV</h1>
+            <nav>
+                <ul class="navListWrapper">
+                    <li class="navItem">Nav item 1</li>
+                    <li class="navItem">Nav item 2</li>
+                    <li class="navItem">Nav item 3</li>
+                </ul>
+            </nav>
+        </header>
+        <div id="messages"></div>
+        <div class="gridWrapper">
+            <aside class="listWrapper">
+                <h3>Channels</h3>
+                <ul id="channelList"></ul>
+            </aside>
+            <main></main>
+        </div>
+    </body>
 
 </html>
