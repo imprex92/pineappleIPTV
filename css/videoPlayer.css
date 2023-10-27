@@ -6,3 +6,6 @@
 	list-style: none;
 	margin-bottom: 0.5rem;
 }
+li.focused{
+	background-color: var(--primary-background-focused);
+}

@@ -4,6 +4,8 @@
 	--header-height: 62px;
 	--default-text-font-size: 20px;
 	--default-header-font-size: 32px;
+	--default-dark-border-color: #8383834d;
+	--primary-background-focused: #8787874a;
 }
 html{
 	height: 100%;
@@ -51,6 +53,7 @@ nav > ul > li{
 aside{
 	padding: 1rem;
 	overflow-y: auto;
+	border-right: 1px solid var(--default-dark-border-color);
 }
 
 main{
