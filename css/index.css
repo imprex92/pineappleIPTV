@@ -1,3 +1,63 @@
-#header{
-	background-color: lime;
+:root{
+	--primary-lightgray-text-on-dark: #f5f5f5;
+	--primary-dark-background-color: #202020;
+	--header-height: 62px;
+	--default-text-font-size: 20px;
+	--default-header-font-size: 32px;
+}
+html{
+	height: 100%;
+}
+body {
+	height: 100%;
+	background-color: var(--primary-dark-background-color);
+	color: var(--primary-lightgray-text-on-dark);
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 1.5rem;
+	padding: 0 1rem;
+	height: var(--header-height);
+}
+header > h1{
+	margin: 0;
+	font-size: var(--default-header-font-size);
+}
+nav{
+	margin-left: auto;
+}
+nav > ul{
+	display: flex;
+	flex-direction: row;
+	font-size: var(--default-text-font-size);
+}
+nav > ul > li{
+	list-style: none;
+	margin-right: 1.5rem;
+}
+
+.gridWrapper{
+	display: grid;
+	grid-template-columns: 25% 1fr;
+	grid-template-rows: auto 1fr;
+	height: calc(100% - var(--header-height) - 2rem);
+	margin-top: 1rem;
+	background-color: #f0f8ff14;
+}
+aside{
+	padding: 1rem;
+	overflow-y: auto;
+}
+
+main{
+	padding: 1rem;
+}
+
+.messages{
+	padding: 0 1rem;
+	height: var(--header-height);
 }

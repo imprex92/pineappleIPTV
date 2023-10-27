@@ -1,0 +1,8 @@
+.country-header{
+	background: #1377b9;
+}
+
+#channelList > li{
+	list-style: none;
+	margin-bottom: 0.5rem;
+}
