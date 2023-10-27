@@ -11,6 +11,20 @@
     <script src="webOSTVjs-1.2.4/webOSTV-dev.js" charset="utf-8"></script>
     <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/videoPlayer.js"></script>
+    <script type="module" src="./js/handelKeyboardEvents.js"></script>
+    <script type="module">
+        // Because it takes some time for channel list to load, we have to make sure the list is loaded before we init the keyboard eventListener
+        import { fetchChannelList } from './js/videoPlayer.js';
+        import { handleKeyboardEvents } from './js/handelKeyboardEvents.js';
+
+        fetchChannelList()
+            .then(() => {
+                handleKeyboardEvents()
+            })
+            .catch((error) => {
+                console.error('Error fetching playlist', error);
+            })
+    </script>
 
     <script type="text/javascript">
         let subscriptionHandle;
@@ -30,10 +44,7 @@
                 console.log("Failed to getTime", args);
             }
         });
-        document.addEventListener('keydown', logEvent)
-        function logEvent(e){
-            console.log(e);
-        }
+        
     </script>
 
     <body>
