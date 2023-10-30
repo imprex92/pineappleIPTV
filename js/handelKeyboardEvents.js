@@ -26,7 +26,7 @@ export function handleKeyboardEvents(){
 				mergedList[listIndex + 1].classList.remove('focused')
 				break;
 			case 40: // Arrow down
-				listIndex < mergedList.length && listIndex === 2 && listIndex++
+				listIndex < mergedList.length && listIndex >= 2 && listIndex++
 				mergedList[listIndex].classList.add('focused')
 				mergedList[listIndex - 1].classList.remove('focused')
 				break;
