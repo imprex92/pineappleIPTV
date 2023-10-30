@@ -1,11 +1,13 @@
 
 export async function fetchChannelList(){
 	const filePath = './playlists/tv_channels_fe918907_plus.m3u'
+	const mainEl = document.getElementsByTagName('main')
 	const channelList = document.getElementById('channelList') // ul element
 	const messagesEl = document.getElementById('messages')
 	
 	return await fetch(filePath)
 	.then((response) => {
+		console.log(response);
 		if (response.status === 404) {
 			console.error('Playlist not found - Please check if the file exist.');
 		} else {
@@ -38,6 +40,11 @@ export async function fetchChannelList(){
 		});
 	})
 	.catch((error) => {
+		const playlistError = document.createElement('div');
+		playlistError.className = 'error';
+		playlistError.innerHTML = '<h2>The wizard couldn\'t summon playlist</h2><p>Please visit our page to upload your playlist (.m3u)</p>';
+		mainEl[0].classList.add('error_playlist');
+		mainEl[0].appendChild(playlistError);
 		console.error(`Something went wrong while the wizard tried to summon your playlist - ${error}`);
 	})
 }

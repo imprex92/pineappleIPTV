@@ -45,7 +45,7 @@ nav > ul > li{
 .gridWrapper{
 	display: grid;
 	grid-template-columns: 25% 1fr;
-	grid-template-rows: auto 1fr;
+	grid-template-rows: auto;
 	height: calc(100% - var(--header-height) - 2rem);
 	margin-top: 1rem;
 	background-color: #f0f8ff14;
@@ -58,8 +58,19 @@ aside{
 
 main{
 	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
+main.error_playlist h2{
+	font-size: 32px;
+}
+main.error_playlist p {
+	font-size: 23px;
+}
+main.error_playlist > .playlistInput {
+	font-size: 18px;
+}
 .messages{
 	padding: 0 1rem;
 	height: var(--header-height);
