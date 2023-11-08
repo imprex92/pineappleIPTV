@@ -1,0 +1,5 @@
+main{
+	display: grid;
+	height: calc(100% - var(--header-height));
+	place-content: center;
+}

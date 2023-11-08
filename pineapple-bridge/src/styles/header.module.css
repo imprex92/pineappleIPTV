@@ -1,0 +1,36 @@
+.header{
+	display: flex;
+	align-items: center;
+	height: var(--header-height);
+}
+.title{
+	font-size: var(--font-xxl);
+    font-weight: bold;
+    color:#fff;
+	margin-left: 1rem;
+}
+.navContainer{
+	margin-left: auto;
+}
+.navList{
+	display: flex;
+	flex-direction: row;
+	column-gap: 0.5rem;
+	list-style: none;
+	padding: 0px;
+	font-size: 18px;
+}
+.navItem{
+	text-decoration: none;
+	font-size: var(--font-l);
+	padding: 0.5rem;
+}
+.nav_active{
+	border-bottom: 2px solid #ffd74b;
+}
+.nav{
+	color: #fff;
+}
+.nav:hover{
+	color: var(--hover-on-white);
+}
