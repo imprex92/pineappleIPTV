@@ -5,10 +5,15 @@ export interface IHomeProps {
 }
 
 export default function Home (props: IHomeProps) {
+	const handleFileChange = (files: FileList) => {
+		console.log('Selected file', files);
+		
+	}
+
   return (
 	<main className={styles.main}>
-		<h1>Welcome to the home page!</h1>
-		<FileInput accept='.m3u' multiple={false} /> 
+		<h1>Select the playlist you want to upload</h1>
+		<FileInput accept='.m3u' multiple={false} onChange={handleFileChange} /> 
 	</main>
   );
 }

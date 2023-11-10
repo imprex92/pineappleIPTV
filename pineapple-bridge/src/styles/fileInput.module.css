@@ -4,3 +4,10 @@
 .label{
 
 }
+.helperText{
+	display: block;
+	margin-top: 0.25rem;
+	font-size: var(--font-tiny);
+	user-select: none;
+	cursor: default;
+}

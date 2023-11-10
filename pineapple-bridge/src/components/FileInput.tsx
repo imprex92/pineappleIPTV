@@ -9,10 +9,17 @@ export interface IFileInputProps {
 }
 
 export default function FileInput (props: IFileInputProps) {
+	const handleFile = (event: React.ChangeEvent<HTMLInputElement>) => {
+		if (!!props.onChange && event?.target?.files) {
+			props.onChange(event.target.files);
+		}
+	}
+
   return (
 	<div>
 		<label className={`${props.labelClasses} ${styles.label}`} htmlFor="playlist-field">{props.title}</label>
-	  	<input className={`${props.inputClasses} ${styles.input}`} type="file" name="playlist" id="playlist-field" />
+	  	<input onChange={handleFile} className={`${props.inputClasses} ${styles.input}`} accept={props.accept} multiple={props.multiple} type="file" name="playlist" id="playlist-field" />
+		<small className={styles.helperText}>only .m3u files allowed</small>
 	</div>
   );
 }
