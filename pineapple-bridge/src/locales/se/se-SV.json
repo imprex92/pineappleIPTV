@@ -1,0 +1,11 @@
+{
+  "title": "Välkommen till React som använder react-i18next",
+  "description": {
+    "part1": "För att komma igång, ändra <1>src/App.js</1> och spara för att ladda on sidan.",
+    "part2": "Byt språk mellan Engelska och Svenska med väljaren ovan."
+  },
+  "uploader": {
+    "title": "Välj spellistan du vill ladda upp",
+    "accepted": "Endast .m3u filer tillåtna"
+  }
+}
