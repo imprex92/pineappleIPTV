@@ -19,3 +19,5 @@ const useLanguageHandler = create<LanguageHandler>()(
     ),
   ),
 )
+
+export default useLanguageHandler

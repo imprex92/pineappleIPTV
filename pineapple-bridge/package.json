@@ -16,6 +16,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^13.3.1",
     "react-router-dom": "^6.18.0",
+    "react-world-flags": "^1.6.0",
     "zustand": "^4.4.6"
   },
   "devDependencies": {
