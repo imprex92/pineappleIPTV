@@ -1,0 +1,10 @@
+{
+  "navigation": {
+    "home": "Hem",
+    "about": "Om denna sidan"
+  },
+  "uploader": {
+    "title": "Välj spellistan du vill ladda upp",
+    "accepted": "Endast .m3u filer tillåtna"
+  }
+}

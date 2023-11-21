@@ -1,0 +1,10 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About this page"
+  },
+  "uploader": {
+    "title": "Select the playlist you want to upload",
+    "accepted": "Only .m3u files allowed"
+  }
+}
