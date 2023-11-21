@@ -7,7 +7,7 @@ import LanguageSelector from './LanguageSelector';
 export interface IHeaderProps {
 }
 
-export default function Header (props: IHeaderProps) {
+export default function Header () {
   return (
 	<header id="header" className={styles.header}>
 		<Link to={'/'}><img src={pineApple} width="32" alt="Logo" /></Link>

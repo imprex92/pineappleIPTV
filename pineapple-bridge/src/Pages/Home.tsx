@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 export interface IHomeProps {
 }
 
-export default function Home (props: IHomeProps) {
+export default function Home () {
 	const { t } = useTranslation()
 	const handleFileChange = (files: FileList) => {
 		console.log('Selected file', files);

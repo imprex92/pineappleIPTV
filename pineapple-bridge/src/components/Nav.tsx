@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 export interface INavProps {
 }
 
-export default function Nav (props: INavProps) {
+export default function Nav () {
 	const { t } = useTranslation();
   return (
 	<nav className={styles.navContainer}>
