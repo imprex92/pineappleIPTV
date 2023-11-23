@@ -5,7 +5,8 @@
   },
   "uploader": {
     "title": "Välj spellistan du vill ladda upp",
-    "accepted": "Endast .m3u filer tillåtna"
+    "accepted": "Endast .m3u filer tillåtna",
+    "upload": "Ladda upp"
   },
   "input":{
     "error":{
