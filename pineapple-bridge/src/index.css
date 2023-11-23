@@ -25,6 +25,12 @@
   --font-xl: 24px;
   --font-xxl: 32px;
 
+  --primary-btn-color: #de6868;
+  --primary-btn-color-hover: #d95050;
+  --primary-accent-color: #fec911;
+  --primary-border-color: #E0E6ED;
+
+  --primary-radius: 20px;
 }
 
 body {
