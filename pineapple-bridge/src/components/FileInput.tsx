@@ -68,13 +68,49 @@ export default function FileInput (props: IFileInputProps) {
 
   return (
 	<div>
-		<form onSubmit={handleSubmit}>
-			<label className={`${props.labelClasses} ${styles.label}`} htmlFor="playlist-field">{props.title}</label>
-			<input onChange={handleFileChange} className={`${props.inputClasses} ${styles.input}`} accept={props.accept} multiple={props.multiple} type="file" name="m3uFile" id="playlist-field" />
+		<form className={styles.formGroup} onSubmit={handleSubmit}>
+			<div className={styles.inputGroup}>
+				<input 
+					className={styles.input} 
+					onChange={handleEmailChange} 
+					type="email" 
+					name="email" 
+					id="email" 
+					placeholder='Enter email'
+					required
+				/>
+				<input 
+					className={styles.input} 
+					onChange={handleVerificationCodeChange} 
+					type="text" 
+					maxLength={4} 
+					minLength={4} 
+					name="verificationCode" 
+					id="code" 
+					placeholder='4 digits code' 
+					pattern="[0-9]{4}" 
+					required 
+					onKeyDown={(e) => { if (!/^\d$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete') {
+						e.preventDefault();
+					} }} 
+					inputMode="numeric"
+				/>
+			</div>
+			<label className={`${props.labelClasses} ${styles.label}`} htmlFor="playlist-field">
+				{props.title}
+			</label>
+			<input 
+				onChange={handleFileChange} 
+				className={`${props.inputClasses} ${styles.input}`} accept={props.accept} multiple={props.multiple} 
+				type="file" 
+				name="m3uFile" 
+				id="playlist-field" 
+				required
+			/>
 			<small className={styles.helperText}>{t('uploader.accepted')}</small>
-			<input onChange={handleEmailChange} type="email" name="email" id="email" placeholder='Enter email' />
-			<input onChange={handleVerificationCodeChange} type="number" maxLength={4} minLength={4} name="verificationCode" id="code" placeholder='4 digits code' />
-			<button type="submit">Upload</button>
+			<div className={styles.buttonGroup}>
+				<button type="submit">{t('uploader.upload')}</button>
+			</div>
 		</form>
 	</div>
   );

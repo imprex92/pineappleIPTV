@@ -1,13 +1,37 @@
-.input{
 
-}
-.label{
-
-}
 .helperText{
 	display: block;
 	margin-top: 0.25rem;
 	font-size: var(--font-tiny);
 	user-select: none;
 	cursor: default;
+}
+.formGroup{
+	display: flex;
+	flex-direction: column;
+}
+.inputGroup{
+	display: flex;	
+	flex-direction: row;
+	margin-bottom: 1rem;
+	gap: 1rem;
+	position: relative;
+	width: 100%;
+	& > .input{
+		width: 50%;
+	}
+}
+.buttonGroup{
+	margin-top: 0.5rem;
+	& > button{
+		padding: 0.25rem 1rem;
+		background-color: var(--primary-btn-color);
+		border: none;
+		transition: 0.5s;
+		border-radius: var(--primary-radius);
+		&:hover{
+			background-color: var(--primary-btn-color-hover);
+			cursor: pointer;
+		}
+	}
 }
