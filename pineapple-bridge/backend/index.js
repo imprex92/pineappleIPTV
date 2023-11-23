@@ -1,33 +1,39 @@
 require('dotenv').config()
 const mongoose = require('mongoose');
+const Upload = require('./dbSchema/uploadModel')
+
+// For backend and express
+const express = require('express');
+const app = express();
+const multer = require('multer');
+const cors = require("cors");
 
 const url = `mongodb+srv://${process.env.REACT_MONGO_USER}:${process.env.REACT_MONGO_PASSWORD}@pineapplecluster.xvmsfvt.mongodb.net/?retryWrites=true&w=majority`
 
 mongoose.connect(url)
  
-// Schema for users of app
-const UserSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    date: {
-        type: Date,
-        default: Date.now,
-    },
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+db.once('open', () => {
+  console.log('Connected to MongoDB');
 });
-const User = mongoose.model('users', UserSchema);
-User.createIndexes();
- 
-// For backend and express
-const express = require('express');
-const app = express();
-const cors = require("cors");
+
+const storage = multer.memoryStorage();
+const upload = multer({
+	storage: storage,
+	fileFilter: (req, file, cb) => {
+		if (file.originalname.endsWith('.m3u')) {
+			cb(null, true);
+		} else {
+			if (!file.originalname.endsWith('.m3u')) {
+				cb(new Error('File type not supported!'), false);
+			} else {
+				cb(new Error('Unknown error'), false);
+			}
+		}
+	}
+}) 
+
 console.log("App listen at port 5000");
 app.use(express.json());
 app.use(cors());
@@ -40,22 +46,31 @@ app.get("/", (req, resp) => {
     // If you see App is working means
     // backend working properly
 });
+
+app.post("/upload", upload.single('m3uFile'), async (req, res) => {
+	try {
+		const { email, verificationCode } = req.body;
+		const fileData = req.file.buffer;
+		const contentType = req.file.mimetype;
+		
+		const newUpload = new Upload({
+			email,
+			verificationCode,
+			m3uFile: {
+				data: fileData,
+				contentType
+			}
+		})
+
+	    await newUpload.save();
+
+		res.status(200).json({ message: 'Upload successful!' });
+
+	} catch (error) {
+		console.error(error);
+    	res.status(500).json({ error: 'Internal Server Error' });
+	}
+
+})
  
-app.post("/register", async (req, resp) => {
-    try {
-        const user = new User(req.body);
-        let result = await user.save();
-        result = result.toObject();
-        if (result) {
-            delete result.password;
-            resp.send(req.body);
-            console.log(result);
-        } else {
-            console.log("User already register");
-        }
- 
-    } catch (e) {
-        resp.send("Something Went Wrong");
-    }
-});
 app.listen(5000);
