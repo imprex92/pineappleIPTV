@@ -12,3 +12,23 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+input[type=file]::file-selector-button {
+  border: none;
+  padding: 0.25rem 1rem;
+  margin-right: 1rem;
+  border-radius: var(--primary-radius);
+  background-color: var(--primary-btn-color);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: var(--primary-btn-color-hover);
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"]{
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--primary-border-color);
+  border-radius: var(--primary-radius);
+}
