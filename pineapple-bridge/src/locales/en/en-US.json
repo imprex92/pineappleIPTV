@@ -6,5 +6,10 @@
   "uploader": {
     "title": "Select the playlist you want to upload",
     "accepted": "Only .m3u files allowed"
-  }
+  },
+  "input":{
+    "error":{
+      "missing": "All fields are required!"
+    }
+  } 
 }
