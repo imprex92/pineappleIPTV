@@ -5,5 +5,21 @@
 
 }
 .errorMessage{
-	
+
+}
+.successMessage{
+
+}
+.messageDisplay{
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	width: 100%;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	font-size: var(--font-l);
+	font-weight: bold;
 }

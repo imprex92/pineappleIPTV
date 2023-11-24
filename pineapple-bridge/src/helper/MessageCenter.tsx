@@ -1,7 +1,8 @@
 import styles from '../styles/messageCenter.module.css'
 
-interface MessageProps {
+export interface MessageProps {
 	message: string;
+	type: 'error' | 'warning' | 'info';
 }
 
 export const InfoMessage: React.FC<MessageProps> = ({ message }) => {
@@ -21,6 +22,13 @@ export const WarningMessage: React.FC<MessageProps> = ({ message }) => {
 export const ErrorMessage: React.FC<MessageProps> = ({ message }) => {
 	return (
 		<div className={styles.errorMessage}>
+			{message}
+		</div>
+	)
+}
+export const SuccessMessage: React.FC<MessageProps> = ({ message }) => {
+	return (
+		<div className={styles.successMessage}>
 			{message}
 		</div>
 	)
