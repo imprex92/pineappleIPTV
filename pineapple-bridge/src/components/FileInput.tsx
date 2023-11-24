@@ -1,6 +1,8 @@
-import { useState } from 'react'
-import styles from '../styles/fileInput.module.css'
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next';
+import styles from '../styles/fileInput.module.css'
+import * as MessageCenter from '../helper/MessageCenter'
+
 export interface IFileInputProps {
 	accept: string; // MIME type(s) to accept. Example: image/*, .jpg,.png,.gif
 	multiple: boolean; // Allow multiple files upload
@@ -11,6 +13,7 @@ export interface IFileInputProps {
 }
 
 export default function FileInput (props: IFileInputProps) {
+	const formRef = useRef<HTMLFormElement | null>(null)
 	const { t } = useTranslation()
 	const [file, setFile] = useState<File | null>(null)
 	const [code, setCode] = useState<number | null>(null)
@@ -53,6 +56,7 @@ export default function FileInput (props: IFileInputProps) {
 
 				if (response.ok) {
 					// Handle success, e.g., show a success message to the user
+					formRef.current?.reset()
 					alert('Upload successful!');
 				} else {
 					// Handle errors, e.g., show an error message to the user
@@ -68,7 +72,7 @@ export default function FileInput (props: IFileInputProps) {
 
   return (
 	<div>
-		<form className={styles.formGroup} onSubmit={handleSubmit}>
+		<form ref={formRef} className={styles.formGroup} onSubmit={handleSubmit}>
 			<div className={styles.inputGroup}>
 				<input 
 					className={styles.input} 
@@ -90,7 +94,7 @@ export default function FileInput (props: IFileInputProps) {
 					placeholder='4 digits code' 
 					pattern="[0-9]{4}" 
 					required 
-					onKeyDown={(e) => { if (!/^\d$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete') {
+					onKeyDown={(e) => { if (!/^\d$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
 						e.preventDefault();
 					} }} 
 					inputMode="numeric"
