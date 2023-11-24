@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/fileInput.module.css'
-import * as MessageCenter from '../helper/MessageCenter'
+import { useMessage } from '../contexts/MessageContext';
 
 export interface IFileInputProps {
 	accept: string; // MIME type(s) to accept. Example: image/*, .jpg,.png,.gif
@@ -15,9 +15,14 @@ export interface IFileInputProps {
 export default function FileInput (props: IFileInputProps) {
 	const formRef = useRef<HTMLFormElement | null>(null)
 	const { t } = useTranslation()
+	const { addMessage } = useMessage()
 	const [file, setFile] = useState<File | null>(null)
 	const [code, setCode] = useState<number | null>(null)
 	const [email, setEmail] = useState<string>('')
+
+	useEffect(() => {
+		addMessage({ message: t('message.error.missing'), type: 'error' });
+	}, []);
 
 	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setEmail(e.target.value);
@@ -40,8 +45,7 @@ export default function FileInput (props: IFileInputProps) {
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
 		if(!file || !email || !code){
-			alert(t('input.error.missing'))
-			return;
+			addMessage({ message: t('message.error.missing'), type: 'error' });
 		} else{
 			const formData = new FormData();
 			formData.append('m3uFile', file);
@@ -57,15 +61,14 @@ export default function FileInput (props: IFileInputProps) {
 				if (response.ok) {
 					// Handle success, e.g., show a success message to the user
 					formRef.current?.reset()
-					alert('Upload successful!');
+					addMessage({ message: t('message.success.upload'), type: 'info' });
 				} else {
-					// Handle errors, e.g., show an error message to the user
-					alert('Upload failed. Please try again.');
+					addMessage({ message: t('message.error.upload'), type: 'error' });
 				}
 				} catch (error) {
-				console.error('Error uploading file:', error);
-				// Handle network or other errors
-				alert('An error occurred. Please try again later.');
+					console.error('Error uploading file:', error);
+					// Handle network or other errors
+					addMessage({ message: t('message.error.network'), type: 'error' });
 				}
 		}
 	}

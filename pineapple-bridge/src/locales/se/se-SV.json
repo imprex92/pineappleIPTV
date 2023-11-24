@@ -8,9 +8,21 @@
     "accepted": "Endast .m3u filer tillåtna",
     "upload": "Ladda upp"
   },
-  "input":{
-    "error":{
-      "missing": "Alla fält nödvändiga!"
+  "message": {
+    "error": {
+      "missing": "Säkerställ att alla fält är ifyllda!",
+      "network": "Nätverksfel, var god försök igen senare.",
+      "generic": "Något gick fel, prova igen senare",
+      "upload": "Uppladdning misslyckades!"
+    },
+    "warning": {
+      
+    },
+    "info": {
+      
+    },
+    "success": {
+      "upload": "Uppladdning lyckades!"
     }
-  } 
+  }
 }
