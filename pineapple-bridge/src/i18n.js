@@ -25,6 +25,8 @@ i18n
 	caches: ['localStorage', 'cookie'],
     detectFromPath: true,
   })
+  .on('initialized', (lng) => { document.documentElement.setAttribute('lang', localStorage.getItem('i18nextLng'))})
+  .on('languageChanged', (lng) => {document.documentElement.setAttribute('lang', lng)})
   .init({
     resources,
 	fallbackLng: 'en',
