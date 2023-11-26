@@ -24,5 +24,34 @@
     "success": {
       "upload": "Upload successful"
     }
+  },
+  "welcome": {
+    "heading": "Welcome to Pineapple IPTV!"
+  },
+  "about": {
+    "heading": "About This Page",
+    "whatIsIPTV": "🍍 What is Pineapple IPTV?",
+    "welcomeDescription": "Welcome to Pineapple IPTV, your personal platform for enjoying IPTV (Internet Protocol Television) on your LG Smart TV. This is a solo project, created and crafted by me with the mission to make watching your favorite channels a delightful and hassle-free experience.",
+    "whatMakesIPTVSpecial": "🎉 What Makes Pineapple IPTV Special?",
+    "specialDescription": "Pineapple IPTV brings a touch of joy to your entertainment experience. With my user-friendly tool, you can seamlessly upload your personalized M3U playlist directly to your LG Smart TV. It's a simple and fun way to curate your channel lineup!",
+    "howItWorks": "💡 How Does It Work?",
+    "uploadPlaylist": "Upload Your M3U Playlist:",
+    "chooseLanguage": "Choose your language (English, Swedish, French, or soon to come, Chinese) and securely upload your M3U playlist.",
+    "setEmailCode": "Set Email and Code:",
+    "securityNote": "Enhance the security of your playlist by setting a personalized email and a 4-digit code. Your data is safe with Pineapple IPTV!",
+    "downloadToLGSmartTV": "Download on Your LG Smart TV:",
+    "enjoyChannels": "Once uploaded, your playlist is ready for download on your LG Smart TV. Enjoy your favorite channels in a snap!",
+    "whyPineappleIPTV": "🤩 Why Pineapple IPTV?",
+    "userFriendly": "User-Friendly:",
+    "userFriendlyDescription": "My tool is designed with simplicity in mind. Whether you're a tech enthusiast or a casual user, Pineapple IPTV is for everyone.",
+    "secureStorage": "Secure Storage:",
+    "secureStorageDescription": "Your data is precious. Pineapple IPTV provides a secure database for your playlists, ensuring privacy and peace of mind.",
+    "multilingualSupport": "Multilingual Support:",
+    "multilingualSupportDescription": "Choose from multiple languages to customize your Pineapple IPTV experience.",
+    "joinCommunity": "🌈 Join the Pineapple IPTV Community!",
+    "soloEndeavor": "This project is a solo endeavor, a labor of love created for enthusiasts by an enthusiast. I believe in the joy of watching TV, and I'm excited to share it with you.",
+    "getInTouch": "📧 Get in Touch",
+    "contactInfo": "Have questions or feedback? Reach out to me at support@pineappleiptv.com. I'd love to hear from you!",
+    "happyWatching": "Happy watching!"
   }
 }

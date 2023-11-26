@@ -1,0 +1,27 @@
+.wrapper {
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+	margin: 20px;
+}
+
+.heading {
+	color: #ff9900;
+}
+
+.paragraf {
+	margin-bottom: 1.5em;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+}
+
+.listItem::before {
+	content: "🍍 ";
+}
+
+.highlight {
+	color: #ff9900;
+	font-weight: bold;
+}
