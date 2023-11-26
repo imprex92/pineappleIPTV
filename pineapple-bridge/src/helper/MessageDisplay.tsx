@@ -33,8 +33,8 @@ const MessageDisplay: React.FC = () => {
 	return (
 		<>
 			{messages.map((message, index) => (
-				<div className={`${styles.messageDisplay} ${getMessageClassName(message.type)}`}>
-					<div key={index}>
+				<div key={index} className={`${styles.messageDisplay} ${getMessageClassName(message.type)}`}>
+					<div>
 						{message.message}
 					</div>
 				</div>
