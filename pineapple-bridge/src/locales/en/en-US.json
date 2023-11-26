@@ -5,6 +5,24 @@
   },
   "uploader": {
     "title": "Select the playlist you want to upload",
-    "accepted": "Only .m3u files allowed"
+    "accepted": "Only .m3u files allowed",
+    "upload": "Upload"
+  },
+  "message": {
+    "error": {
+      "missing": "Make sure that all field are filled!",
+      "network": "Network error. Please try again later.",
+      "generic": "Something went wrong, try again later",
+      "upload": "Upload failed"
+    },
+    "warning": {
+      
+    },
+    "info": {
+      
+    },
+    "success": {
+      "upload": "Upload successful"
+    }
   }
 }

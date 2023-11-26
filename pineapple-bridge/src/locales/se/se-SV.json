@@ -5,6 +5,24 @@
   },
   "uploader": {
     "title": "Välj spellistan du vill ladda upp",
-    "accepted": "Endast .m3u filer tillåtna"
+    "accepted": "Endast .m3u filer tillåtna",
+    "upload": "Ladda upp"
+  },
+  "message": {
+    "error": {
+      "missing": "Säkerställ att alla fält är ifyllda!",
+      "network": "Nätverksfel, var god försök igen senare.",
+      "generic": "Något gick fel, prova igen senare",
+      "upload": "Uppladdning misslyckades!"
+    },
+    "warning": {
+      
+    },
+    "info": {
+      
+    },
+    "success": {
+      "upload": "Uppladdning lyckades!"
+    }
   }
 }
