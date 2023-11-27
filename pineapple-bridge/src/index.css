@@ -1,3 +1,32 @@
+@font-face{
+  font-family: 'FangSongti';
+  src: local("simfang"), url("./assets/fonts/simfang.ttf") format("truetype");
+}
+@font-face {
+  font-family: "songtiScBold";
+  src: local("songti-sc-bold"), url("./assets/fonts/songti-sc-bold.ttf") format("truetype")
+}
+@font-face{
+  font-family: "songtiScRegular";
+  src: local("songti-sc-regular"), url("./assets/fonts/songti-sc-regular.ttf") format("truetype")
+}
+@font-face {
+  font-family: "songtiScLight";
+  src: local("songti-sc-light"), url("./assets/fonts/songti-sc-light.ttf") format("truetype")
+}
+
+html[lang="zh-CN"] {
+  & p, span{
+    font-family: "FangSongti" !important;
+  }
+  & p.light{
+    font-family: "songtiScLight" !important;
+  }
+  & h1, h2, h3, h4{
+    font-family: "songtiScBold" !important;
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -32,6 +61,7 @@
 
   --primary-radius: 20px;
 }
+
 
 body {
   margin: 0;

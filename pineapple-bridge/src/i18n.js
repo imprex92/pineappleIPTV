@@ -5,10 +5,14 @@ import supportedLngs from './utils/supportedLanguages.json'
 
 import enTrans from './locales/en/en-US.json'
 import svTrans from './locales/se/se-SV.json'
+import frTrans from './locales/fr/fr-FR.json'
+import cnTrans from './locales/cn/zh-Hans.json'
 
 const resources = {
   en: { translation: enTrans },
-  sv: { translation: svTrans }
+  sv: { translation: svTrans },
+  fr: { translation: frTrans },
+  "zh-CN": { translation: cnTrans },
 };
 
 i18n
@@ -28,8 +32,9 @@ i18n
   .on('initialized', (lng) => { document.documentElement.setAttribute('lang', localStorage.getItem('i18nextLng'))})
   .on('languageChanged', (lng) => {document.documentElement.setAttribute('lang', lng)})
   .init({
+    debug: true,
     resources,
-	fallbackLng: 'en',
+	  fallbackLng: 'en',
     interpolation: {
       escapeValue: false
     }
