@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next';
 import styles from '../styles/fileInput.module.css'
 import { useMessage } from '../contexts/MessageContext';
@@ -19,10 +19,6 @@ export default function FileInput (props: IFileInputProps) {
 	const [file, setFile] = useState<File | null>(null)
 	const [code, setCode] = useState<number | null>(null)
 	const [email, setEmail] = useState<string>('')
-
-	useEffect(() => {
-		addMessage({ message: t('message.error.missing'), type: 'error' });
-	}, []);
 
 	const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setEmail(e.target.value);

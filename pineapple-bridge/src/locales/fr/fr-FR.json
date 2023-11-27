@@ -1,0 +1,57 @@
+{
+	"navigation": {
+	"home": "Accueil",
+	"about": "À propos de cette page"
+	},
+	"uploader": {
+	"title": "Sélectionnez la playlist que vous souhaitez télécharger",
+	"accepted": "Seuls les fichiers .m3u sont autorisés",
+	"upload": "Télécharger"
+	},
+	"message": {
+	"error": {
+		"missing": "Assurez-vous que tous les champs sont remplis !",
+		"network": "Erreur réseau. Veuillez réessayer plus tard.",
+		"generic": "Quelque chose s'est mal passé, réessayez plus tard",
+		"upload": "Échec du téléchargement"
+	},
+	"warning": {
+		
+	},
+	"info": {
+		
+	},
+	"success": {
+		"upload": "Téléchargement réussi"
+	}
+	},
+	"welcome": {
+	"heading": "Bienvenue sur Pineapple IPTV !"
+	},
+  "about": {
+    "heading": "À propos de cette page",
+    "whatIsIPTV": "🍍 Qu'est-ce que Pineapple IPTV ?",
+    "welcomeDescription": "Bienvenue sur Pineapple IPTV, votre plateforme personnelle pour profiter de la télévision par protocole Internet (IPTV) sur votre téléviseur intelligent LG. Il s'agit d'un projet individuel, créé et conçu par moi-même dans le but de rendre le visionnage de vos chaînes préférées une expérience délicieuse et sans tracas.",
+    "whatMakesIPTVSpecial": "🎉 Ce qui rend Pineapple IPTV spécial",
+    "specialDescription": "Pineapple IPTV apporte une touche de joie à votre expérience de divertissement. Avec mon outil convivial, vous pouvez télécharger votre playlist M3U personnalisée directement sur votre téléviseur intelligent LG. C'est une façon simple et amusante de créer votre liste de chaînes !",
+    "howItWorks": "💡 Comment ça marche ?",
+    "uploadPlaylist": "Téléchargez votre playlist M3U :",
+    "chooseLanguage": "Choisissez votre langue (anglais, suédois, français ou bientôt chinois) et téléchargez votre playlist M3U en toute sécurité.",
+    "setEmailCode": "Définissez votre e-mail et votre code :",
+    "securityNote": "Renforcez la sécurité de votre playlist en définissant un e-mail personnalisé et un code à 4 chiffres. Vos données sont en sécurité avec Pineapple IPTV !",
+    "downloadToLGSmartTV": "Téléchargez sur votre téléviseur intelligent LG :",
+    "enjoyChannels": "Une fois téléchargée, votre playlist est prête à être téléchargée sur votre téléviseur intelligent LG. Profitez de vos chaînes préférées en un instant !",
+    "whyPineappleIPTV": "🤩 Pourquoi Pineapple IPTV ?",
+    "userFriendly": "Facile à utiliser :",
+    "userFriendlyDescription": "Mon outil est conçu dans un souci de simplicité. Que vous soyez un passionné de technologie ou un utilisateur occasionnel, Pineapple IPTV est pour tout le monde.",
+    "secureStorage": "Stockage sécurisé :",
+    "secureStorageDescription": "Vos données sont précieuses. Pineapple IPTV offre une base de données sécurisée pour vos playlists, garantissant la confidentialité et la tranquillité d'esprit.",
+    "multilingualSupport": "Support multilingue :",
+    "multilingualSupportDescription": "Choisissez parmi plusieurs langues pour personnaliser votre expérience Pineapple IPTV.",
+    "joinCommunity": "🌈 Rejoignez la communauté Pineapple IPTV !",
+    "soloEndeavor": "Ce projet est une entreprise individuelle, un travail d'amour créé par des passionnés pour des passionnés. Je crois à la joie de regarder la télévision, et je suis ravi de le partager avec vous.",
+    "getInTouch": "📧 Contactez-nous",
+    "contactInfo": "Vous avez des questions ou des commentaires ? Contactez-moi à support@pineappleiptv.com. J'adorerais avoir de vos nouvelles !",
+    "happyWatching": "Bon visionnage ! 🍍✨"
+  }
+}

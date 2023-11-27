@@ -1,0 +1,57 @@
+{
+    "navigation": {
+    "home": "首页",
+    "about": "关于本页面"
+  },
+  "uploader": {
+    "title": "选择要上传的播放列表",
+    "accepted": "只允许 .m3u 文件",
+    "upload": "上传"
+  },
+  "message": {
+    "error": {
+      "missing": "确保所有字段都填写！",
+      "network": "网络错误。请稍后再试。",
+      "generic": "发生了一些问题，请稍后再试",
+      "upload": "上传失败"
+    },
+    "warning": {
+      
+    },
+    "info": {
+      
+    },
+    "success": {
+      "upload": "上传成功"
+    }
+  },
+  "welcome": {
+    "heading": "欢迎来到 Pineapple IPTV！"
+  },
+  "about": {
+    "heading": "关于本页面",
+    "whatIsIPTV": "🍍 什么是 Pineapple IPTV？",
+    "welcomeDescription": "欢迎来到 Pineapple IPTV，这是您在 LG 智能电视上享受 IPTV（互联网协议电视）的个人平台。这是一个独立项目，由我亲自创建和打造，旨在使您观看喜爱的频道成为一种愉快且无忧的体验。",
+    "whatMakesIPTVSpecial": "🎉 什么使 Pineapple IPTV 特别",
+    "specialDescription": "Pineapple IPTV 为您的娱乐体验增添了一抹喜悦。使用我的用户友好工具，您可以轻松地将个性化的 M3U 播放列表上传到 LG 智能电视。这是一种简单而有趣的方式来策划您的频道列表！",
+    "howItWorks": "💡 它是如何工作的？",
+    "uploadPlaylist": "上传您的 M3U 播放列表：",
+    "chooseLanguage": "选择您的语言（英语、瑞典语、法语或即将推出的中文），并安全地上传您的 M3U 播放列表。",
+    "setEmailCode": "设置电子邮件和代码：",
+    "securityNote": "通过设置个性化的电子邮件和 4 位代码，增强播放列表的安全性。您的数据在 Pineapple IPTV 下是安全的！",
+    "downloadToLGSmartTV": "在您的 LG 智能电视上下载：",
+    "enjoyChannels": "一旦上传，您的播放列表就可以在 LG 智能电视上下载。尽情享受您喜爱的频道！",
+    "whyPineappleIPTV": "🤩 为什么选择 Pineapple IPTV？",
+    "userFriendly": "用户友好：",
+    "userFriendlyDescription": "我的工具设计简单易用。无论您是技术爱好者还是偶尔使用者，Pineapple IPTV 都适用于每个人。",
+    "secureStorage": "安全存储：",
+    "secureStorageDescription": "您的数据很珍贵。Pineapple IPTV 为您的播放列表提供安全数据库，确保隐私和安心。",
+    "multilingualSupport": "多语言支持：",
+    "multilingualSupportDescription": "选择多种语言，定制您的 Pineapple IPTV 体验。",
+    "joinCommunity": "🌈 加入 Pineapple IPTV 社区！",
+    "soloEndeavor": "这个项目是我个人努力的成果，是由热爱者为热爱者创造的劳动成果。我相信看电视的快乐，很高兴与您分享。",
+    "getInTouch": "📧 联系我们",
+    "contactInfo": "有问题或反馈？请通过 support@pineappleiptv.com 与我联系。我很乐意听到您的声音！",
+    "happyWatching": "愉快观看！ 🍍✨"
+  }
+}

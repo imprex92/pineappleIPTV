@@ -3,6 +3,10 @@ import './App.css'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Header from './components/Header'
+import './assets/fonts/simfang.ttf'
+import './assets/fonts/songti-sc-bold.ttf'
+import './assets/fonts/songti-sc-regular.ttf'
+import './assets/fonts/songti-sc-light.ttf'
 
 function App() {
 
