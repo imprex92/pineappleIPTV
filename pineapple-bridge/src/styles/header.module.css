@@ -34,3 +34,18 @@
 .nav:hover{
 	color: var(--hover-on-white);
 }
+
+@media (max-width: 768px){
+	.header{
+		flex-wrap: wrap;
+		height: auto;
+		min-height: var(--header-height);
+	}
+	.navList{
+		margin: 0;
+	}
+	.title{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
