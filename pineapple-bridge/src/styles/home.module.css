@@ -1,5 +1,5 @@
 main{
 	display: grid;
-	height: calc(100% - var(--header-height));
+	min-height: calc(100vh - var(--header-height));
 	place-content: center;
 }
